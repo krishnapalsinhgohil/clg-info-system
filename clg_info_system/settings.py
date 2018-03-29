@@ -54,7 +54,7 @@ ROOT_URLCONF = 'clg_info_system.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['home/templates/home'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
