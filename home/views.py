@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Student, Semester
+from .models import Student, Semester,Subject
 
 
 # Create your views here.
@@ -22,8 +22,10 @@ def semesters(req):
 
 
 def subjects(req):
-    return render(req, 'subjects_list.html')
+    subjects= Subject.objects.all()
+    return render(req, 'subjects_list.html',{'subjects':subjects})
 
 
 def students(req):
-    return render(req, 'student_list.html')
+    students = Student.objects.all()
+    return render(req, 'student_list.html', {'students': students})

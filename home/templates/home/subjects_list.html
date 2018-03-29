@@ -5,9 +5,19 @@
     <title>Subjects</title>
 </head>
 <body>
-<ul>
-    <li>Subject name</li>
-    <li>optional or regular</li>
-</ul>
+<table cellpadding="2" cellspacing="12">
+    <tr>
+        <td>NAME</td>
+        <td>OPTIONAL</td>
+    </tr>
+    {% for subject in subjects %}
+
+    <tr>
+        <td>{{subject.name}}</td>
+        <td>{{subject.optional}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
 </body>
 </html>
