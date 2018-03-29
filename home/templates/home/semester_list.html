@@ -5,12 +5,22 @@
     <title>Semester List</title>
 </head>
 <body>
-
 <ul>
-    <li>name</li>
-    <li>total count of students</li>
-    <li>total credits of semester</li>
-</ul>
+    <table cellpadding="2" cellspacing="12">
+        <tr>
+            <td>SEMESTER</td>
+            <td>CREDIT</td>
+            <td>STUDENTS</td>
+        </tr>
+        {% for semester,no in values %}
 
+        <tr>
+            <td>{{semester}}</td>
+            <td>{{semester.credits}}</td>
+            <td>{{no}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</ul>
 </body>
 </html>
