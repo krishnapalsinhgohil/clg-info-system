@@ -6,15 +6,29 @@
 </head>
 <body>
 <table cellpadding="2" cellspacing="12">
-    <tr>
-        <td>NAME</td>
-        <td>OPTIONAL</td>
-    </tr>
+    <thead>
+        <th>Subject</th>
+        <th>Optional</th>
+        <th>Operations</th>
+    </thead>
     {% for subject in subjects %}
 
     <tr>
         <td>{{subject.name}}</td>
-        <td>{{subject.optional}}</td>
+        <td>{% if subject.optional == True %}
+            Yes
+            {% elif subject.optional == False %}
+            No
+            {% endif %}
+        </td>
+        <td>
+            <form action="{% url 'sub_operations' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{subject.id}}" name="id"/>
+                 <input type="submit" value="Delete" name="btnDelete"/>
+                <input type="submit" value="Update" name="btnUpdate"/>
+            </form>
+        </td>
     </tr>
     {% endfor %}
 </table>

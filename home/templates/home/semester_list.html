@@ -6,11 +6,11 @@
 </head>
 <body>
 <table cellpadding="2" cellspacing="12">
-    <tr>
-        <td>SEMESTER</td>
-        <td>CREDIT</td>
-        <td>STUDENTS</td>
-    </tr>
+    <thead>
+        <th>Semester</th>
+        <th>Credits</th>
+        <th>Students</th>
+    </thead>
     {% for semester,no in values %}
 
     <tr>
@@ -20,5 +20,10 @@
     </tr>
     {% endfor %}
 </table>
+
+<!--{% for item in semester %}-->
+<!--{{item}}-->
+<!--{% endfor %}-->
+
 </body>
 </html>

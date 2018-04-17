@@ -5,14 +5,13 @@
     <title>Home Page</title>
 </head>
 <body>
+<h3><a href="{% url 'adminhome' %}">Go to Admin (insert record)</a></h3>
 <table>
     <tr>
-        <td><a href="{% url 'semesters' %}" >Semesters</a></td>
-        <td><a href="{% url 'subjects' %}" >Subjects</a></td>
-        <td><a href="{% url 'students' %}" >Students</a></td>
+        <td><a href="{% url 'semester' %}">Semesters</a></td>
+        <td><a href="{% url 'subject' %}">Subjects</a></td>
+        <td><a href="{% url 'student' %}">Students</a></td>
     </tr>
 </table>
-
-
 </body>
 </html>
